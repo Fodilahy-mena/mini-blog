@@ -45,37 +45,37 @@ const newPost = () => {
 
     //Checkbox buttons
 
-    // let firstSpan = createElement('span');
-    // firstSpan.classList.add('badge', 'badge-light', 'hidden');
-    // firstSpan.textContent = "Hobbies";
+    let firstSpan = createElement('span');
+    firstSpan.classList.add('badge','badge-light','hidden');
+    firstSpan.textContent = "Hobbies";
 
-    // let secondSpan = createElement('span');
-    // secondSpan.classList.add('badge', 'badge-light', 'hidden');
-    // secondSpan.textContent = "School life";
+    let secondSpan = createElement('span');
+    secondSpan.classList.add('badge','badge-light','hidden');
+    secondSpan.textContent = "School life";
 
-    // let thirdSpan = createElement('span');
-    // thirdSpan.classList.add('badge', 'badge-light', 'hidden');
-    // thirdSpan.textContent = "Personal";
+    let thirdSpan = createElement('span');
+    thirdSpan.classList.add('badge','badge-light','hidden');
+    thirdSpan.textContent = "Personal";
 
     // Checkbox condution
 
-    // if (firstCheckBox.checked) {
-    //   firstSpan.classList.remove('hidden');
-    // }
-    // if (secondCheckBox.checked) {
-    //   secondSpan.classList.remove('hidden');
-    // }
-    // if (thirdCheckBox.checked) {
-    //   thirdSpan.classList.remove('hidden');
-    // }
+    if (firstCheckBox.checked) {
+      firstSpan.classList.remove('hidden');
+    }
+    if (secondCheckBox.checked) {
+      secondSpan.classList.remove('hidden');
+    }
+    if (thirdCheckBox.checked) {
+      thirdSpan.classList.remove('hidden');
+    }
 
     // AppendChild all of them
 
     childOfNewDiv.appendChild(newHeading);
     childOfNewDiv.appendChild(newParagraph);
-    // childOfNewDiv.appendChild(firstSpan);
-    // childOfNewDiv.appendChild(secondSpan);
-    // childOfNewDiv.appendChild(thirdSpan);
+    childOfNewDiv.appendChild(firstSpan);
+    childOfNewDiv.appendChild(secondSpan);
+    childOfNewDiv.appendChild(thirdSpan);
     newDiv.appendChild(childOfNewDiv);  
     return newDiv;
   }
