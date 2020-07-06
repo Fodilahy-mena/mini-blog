@@ -14,6 +14,13 @@ myForm.setAttribute('id', "form_body");
 const myTextAreaAttr = document.querySelector('textarea');
 myTextAreaAttr.setAttribute('name', "value");
 
+const postTitleInput = document.querySelector('#new-post-title');
+const postContentInput = document.querySelector('#new-post-content');
+
+const firstCheckBox = document.querySelector('#hobbies-tag');
+const secondCheckBox = document.querySelector('#school-life-tag');
+const thirdCheckBox = document.querySelector('#personal-tag');
+
 const newPost = () => {
     let parentDiv = document.createElement('div');
     parentDiv.setAttribute('id', 'post-list')
@@ -29,31 +36,46 @@ const newPost = () => {
 
     let newHeading = document.createElement('h5');
     newHeading.classList.add("card-title");
-    newHeading.textContent =  document.querySelector('#new-post-title').value;
+    newHeading.textContent =  postTitleInput.value;
 
     // Add a new Post Content
     let newParagraph = document.createElement('p');
     newParagraph.classList.add("card-text");
-    newParagraph.textContent =  document.querySelector('#new-post-content').value;
+    newParagraph.textContent =  postContentInput.value;
 
     //Checkbox buttons
 
     // let firstSpan = createElement('span');
-    // firstSpan.classList.add('badge');
-    // firstSpan.classList.add('badge-light');
+    // firstSpan.classList.add('badge', 'badge-light', 'hidden');
+    // firstSpan.textContent = "Hobbies";
 
     // let secondSpan = createElement('span');
-    // secondSpan.classList.add('badge');
-    // secondSpan.classList.add('badge-light');
+    // secondSpan.classList.add('badge', 'badge-light', 'hidden');
+    // secondSpan.textContent = "School life";
 
     // let thirdSpan = createElement('span');
-    // thirdSpan.classList.add('badge');
-    // thirdSpan.classList.add('badge-light');
+    // thirdSpan.classList.add('badge', 'badge-light', 'hidden');
+    // thirdSpan.textContent = "Personal";
+
+    // Checkbox condution
+
+    // if (firstCheckBox.checked) {
+    //   firstSpan.classList.remove('hidden');
+    // }
+    // if (secondCheckBox.checked) {
+    //   secondSpan.classList.remove('hidden');
+    // }
+    // if (thirdCheckBox.checked) {
+    //   thirdSpan.classList.remove('hidden');
+    // }
 
     // AppendChild all of them
 
     childOfNewDiv.appendChild(newHeading);
     childOfNewDiv.appendChild(newParagraph);
+    // childOfNewDiv.appendChild(firstSpan);
+    // childOfNewDiv.appendChild(secondSpan);
+    // childOfNewDiv.appendChild(thirdSpan);
     newDiv.appendChild(childOfNewDiv);  
     return newDiv;
   }
